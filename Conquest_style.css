@@ -9,6 +9,8 @@
 
 /* Font-Families*/
 
+/* Design and Layout CSS*/
+
 body{
 	background:#ccc;
 	-webkit-user-select: none;
@@ -32,22 +34,25 @@ div > div{
 	
 }
 
-.left{
+.FounderTools{
 	width: 30%;
 	background: #ccc; 
 	
 }
 
 
-.middle {
+.ConquestMain{
 	width: 40%;
 	background:#cba
 }
 
-.right {
+.TalentsTraits{
 	width: 30%;
 	background:#ca8
 }
+/* Design and Layout CSS*/
+
+/*Founder Tools*/
 
 .Purchaseicon {
 	width: 50px;
@@ -71,14 +76,19 @@ div > div{
     padding-right: 3px;
 }
 
+/*Founder Tools*/
+
+/*Section Titles*/
 
 #FoundingToolsTitle {
+	font-family: GermaniaOne-Regular;
 	font-size: 30px;
 	text-align: center;
 	vertical-align: center;
 }
 
 #TalentTitle {
+	font-family: GermaniaOne-Regular;
 	font-size: 30px;
 	text-align: center;
 	vertical-align: center;
@@ -86,11 +96,15 @@ div > div{
 }
 
 #MainTitle {
+	font-family: GermaniaOne-Regular;
 	font-size: 30px;
 	text-align: center;
 	vertical-align: middle;
 }
 
+/*Section Titles*/
+
+/*Resources*/
 
 #TotalLand {
 	font-size: 20px;
@@ -118,3 +132,5 @@ div > div{
 	border: 1px solid;
 	border-color: #CC9999;
 }
+
+/*Resources*/
