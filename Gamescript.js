@@ -43,13 +43,13 @@ function systemclear(){
 
 
 function buycitizen(){
-		CitizenCost = Math.pow(2, NumCitizens);
-		document.getElementById("CitizenCost").innerHTML = "Cost of Citizen " + CitizenCost;
+		CitizenCost = Math.pow(5, NumCitizens);
 		if(land >= CitizenCost){
+			document.getElementById("CitizenCost").innerHTML = "The next citizen will cost " + CitizenCost * 5 + " Land resources.";  /* CitizentCost * x MUST MATCH Math.pow(x, NumCitizens) */
+			NumCitizens = NumCitizens + 1;
+			document.getElementById("NumCitizens").innerHTML = "You currently have  " + NumCitizens + " citizens.";
 			land = land - CitizenCost;
 			eps = eps + 2;
-			NumCitizens++;
-			document.getElementById("NumCitizens").innerHTML = NumCitizens;
 		}
 		else
 			document.getElementById("SystemMessage").innerHTML = "You do not have enough Land Resources to provide for more Citizens right now!";
@@ -57,13 +57,13 @@ function buycitizen(){
 }
 
 function buysoldier(){
-		SoldierCost = Math.pow(2, NumSoldiers);
-		document.getElementById("SoldierCost").innerHTML = "Cost of Soldier " + SoldierCost;
+		SoldierCost = Math.pow(5, NumSoldiers);
 		if(economy >= SoldierCost){
+			document.getElementById("SoldierCost").innerHTML = "The next soldier will cost " + SoldierCost * 5 + " economy resources.";  /* CitizentCost * x MUST MATCH Math.pow(x, NumCitizens) */
+			NumSoldiers = NumSoldiers + 1;
+			document.getElementById("NumSoldiers").innerHTML = "You currently have  " + NumSoldiers + " soldiers";
 			economy = economy - SoldierCost;
 			wps = wps + 2;
-			NumSoldiers++;
-			document.getElementById("NumSoldiers").innerHTML = NumSoldiers;
 		}
 		else
 			document.getElementById("SystemMessage").innerHTML = "You do not have enough Economy Resources to fund a Soldier right now!";
@@ -71,13 +71,13 @@ function buysoldier(){
 }
 
 function buysettler(){
-		SettlerCost = Math.pow(2, NumSettlers);
-		document.getElementById("SettlerCost").innerHTML = "Cost of Settler " + SettlerCost;
+		SettlerCost = Math.pow(5, NumSettlers);
 		if(war >= SettlerCost){
+			document.getElementById("SettlerCost").innerHTML = "The next settler will cost " + SettlerCost * 5 + " war resources.";  /* CitizentCost * x MUST MATCH Math.pow(x, NumCitizens) */
+			NumSettlers = NumSettlers + 1;
+			document.getElementById("NumSettlers").innerHTML = "You currently have  " + NumSettlers + " settlers";
 			war = war - SettlerCost;
 			lps = lps + 2;
-			NumSettlers++;
-			document.getElementById("NumSettlers").innerHTML = NumSettlers;
 		}
 		else
 			document.getElementById("SystemMessage").innerHTML = "You do not have enough War Resources to defend a Settler right now!";
