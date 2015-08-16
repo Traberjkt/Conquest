@@ -158,4 +158,12 @@ div > div{
 	border-color: #CC9999;
 }
 
+#SystemMessage {
+	font-size: 15px;
+	text-align: center;
+	vertical-align: middle;
+	background: #CAC4B8;
+	border: 1px solid;
+	border-color: #CC9999;
+}
 /*Resources*/

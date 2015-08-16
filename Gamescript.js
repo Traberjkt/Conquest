@@ -6,6 +6,8 @@ var economy = 0;
 var eps = 1;
 
 
+
+
 window.setInterval(
 function land_gain(){
 	land = land + lps;
@@ -34,6 +36,8 @@ function buycitizen(){
 			land = land - citizen_cost;
 			eps = eps + 2;
 		}
+		else
+			document.getElementById("SystemMessage").innerHTML = "You do not have enough Land Resources to provide for more Citizens right now!";
 }
 
 function buysoldier(){
@@ -42,6 +46,9 @@ function buysoldier(){
 			economy = economy - soldier_cost;
 			wps = wps + 2;
 		}
+		else
+			document.getElementById("SystemMessage").innerHTML = "You do not have enough Economy Resources to fund a Soldier right now!";
+			setTimeout(docu)
 }
 
 function buysettler(){
@@ -50,4 +57,6 @@ function buysettler(){
 			war = war - settler_cost;
 			lps = lps + 2;
 		}
+		else
+			document.getElementById("SystemMessage").innerHTML = "You do not have enough War Resources to defend a Settler right now!";
 }
