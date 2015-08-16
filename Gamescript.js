@@ -1,11 +1,15 @@
 var land = 0;
-var lps = 1;
 var war = 0;
-var wps = 1;
 var economy = 0;
+
+var wps = 1;
 var eps = 1;
+var lps = 1;
 
-
+var NumCitizens = 0;
+var NumSoldiers = 0;
+var NumSettlers = 0;
+var CitizenCost = 1;
 
 
 window.setInterval(
@@ -36,10 +40,13 @@ function systemclear(){
 }
 
 function buycitizen(){
-		var citizen_cost = 20;
-		if(land >= citizen_cost){
-			land = land - citizen_cost;
+		CitizenCost = Math.pow(2, NumCitizens);
+		if(land >= CitizenCost){
+			land = land - CitizenCost;
 			eps = eps + 2;
+			document.getElementById("CitizenCost").innerHTML = "Cost of Citizen " + CitizenCost;
+			NumCitizens++;
+			document.getElementById("NumCitizens").innerHTML = NumCitizens;
 		}
 		else
 			document.getElementById("SystemMessage").innerHTML = "You do not have enough Land Resources to provide for more Citizens right now!";
