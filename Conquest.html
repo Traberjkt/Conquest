@@ -3,41 +3,57 @@
 <head>
 <title id="PageTitle">Conquest</title>
 <link rel="stylesheet" type="text/css" href="Conquest_style.css">
+<script type="text/javascript" src="gamescript.js"></script>
 
 <!--pi.png = PlaceHolder Icon -->
 
 <div class="container">
+
+
 	<div class="FounderTools">
-		<h1 id="FoundingToolsTitle"> Founding Tools</h1>
+		<h1 id="FoundingToolsTitle"> Founder Tools</h1>
 		<img class="Purchaseicon" id="Citizen" src="pi.png">
-		<p class="ItemCaption" id="CitizenCost">Citizen: -20L +2EPS</p>
+		<p id="FounderToolTip"> <b>Citizen</b> - An inhabitant of your settlement that creates commerce.</p>
+		<p class="ItemCaption" id="CitizenCost"> <b> Cost 20 Land | Creates + 2EPS</b> </p>
+		<button id="PurchaseFounderTool" onClick="buycitizen();">Buy Citizen</button>
+		<br>
 		<img class="Purchaseicon" id="Soilder" src="pi.png">
-		<p class="ItemCaption" id="SoldierCost">Soldier: -20E +2WPS</p>
+		<p id="FounderToolTip"> <b>Soilder</b> - A courageous battle-hardened fighter trained in the acts of warfare. </p>
+		<p class="ItemCaption" id="SoldierCost"> <b> Cost 20 Economy | Creates + 2WPS</b> </p>
+		<button id="PurchaseFounderTool" onClick="buysoldier();">Buy Soldier</button>
+		<br>
 		<img class="Purchaseicon" id="Settler" src="pi.png">
-		<p class="ItemCaption" id="SettlerCost">Settler: -20W +2:LPS</p>
+		<p id="FounderToolTip"> <b>Settler</b> - An Explorer and establisher of new land.</p>
+		<p class="ItemCaption" id="SettlerCost"> <b> Cost 20 Economy | Creates + 2LPS</b> </p>
+		<button id="PurchaseFounderTool" onClick="buysettler();">Buy Settler</button>
 	</div>
+	
+	
+	
 	<div class="ConquestMain">
 		<h1 id="MainTitle"> Conquest </h1>
 		<br>
-		<p id="TotalLand">Land: </P>
-		<p id="TotalWar">War: </p>
-		<p id="TotalEconomy">Economy: </p>
+		<p id="Resource"> Land </p>
+		<p id="TotalLand">0</p>
+		<br>
+		<p id="Resource"> War</p>
+		<p id="TotalWar">0</p>
+		</br>
+		<p id="Resource"> Economy</p>
+		<p id="TotalEconomy">0</p>
 		<p>
 		<p>
 		<center><button id="Help">Help</button></center>
 		<br>
 		<center><button id="About">About</button></center>
+		<br>
 	</div>
 	<div class="TalentsTraits">
 		<h1 id="TalentTitle">Talents and Traits</h1>
 	</div>
+	
+</div>
 		
-
-
-
-
-
-
 
 
 

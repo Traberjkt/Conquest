@@ -7,6 +7,11 @@
 	src: url("GermaniaOne-Regular.ttf")
 }
 
+@font-face{
+	font-family: "SigmarOne";
+	src: url("SigmarOne.ttf")
+	
+}
 /* Font-Families*/
 
 /* Design and Layout CSS*/
@@ -36,7 +41,7 @@ div > div{
 
 .FounderTools{
 	width: 30%;
-	background: #ccc; 
+	background: #CDB482; 
 	
 }
 
@@ -76,9 +81,28 @@ div > div{
     padding-right: 3px;
 }
 
+.PurchaseFounderTool {
+	padding-left: 7%;
+}
+
+#FounderToolTip {
+	font-size: 15px;
+	padding-left: 7%;
+	display: block;
+	
+}
+
 /*Founder Tools*/
 
 /*Section Titles*/
+
+#Resource{
+	font-family: SigmarOne;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: center;
+	
+}
 
 #FoundingToolsTitle {
 	font-family: GermaniaOne-Regular;
@@ -105,6 +129,7 @@ div > div{
 /*Section Titles*/
 
 /*Resources*/
+
 
 #TotalLand {
 	font-size: 20px;
