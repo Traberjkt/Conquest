@@ -30,6 +30,11 @@ function economy_gain(){
 } , 1000);
 
 
+function systemclear(){
+	document.getElementById("SystemMessage").innerHTML = "No Messages"
+	
+}
+
 function buycitizen(){
 		var citizen_cost = 20;
 		if(land >= citizen_cost){
@@ -38,6 +43,7 @@ function buycitizen(){
 		}
 		else
 			document.getElementById("SystemMessage").innerHTML = "You do not have enough Land Resources to provide for more Citizens right now!";
+		setTimeout(systemclear, 5000)
 }
 
 function buysoldier(){
@@ -48,7 +54,7 @@ function buysoldier(){
 		}
 		else
 			document.getElementById("SystemMessage").innerHTML = "You do not have enough Economy Resources to fund a Soldier right now!";
-			setTimeout(docu)
+		setTimeout(systemclear, 5000)
 }
 
 function buysettler(){
@@ -59,4 +65,5 @@ function buysettler(){
 		}
 		else
 			document.getElementById("SystemMessage").innerHTML = "You do not have enough War Resources to defend a Settler right now!";
+		setTimeout(systemclear, 5000)
 }

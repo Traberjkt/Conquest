@@ -158,6 +158,13 @@ div > div{
 	border-color: #CC9999;
 }
 
+#SM {
+	font-family: SigmarOne;
+	font-size: 15px;
+	text-align: center;
+	vertical-align: center;
+}
+
 #SystemMessage {
 	font-size: 15px;
 	text-align: center;
