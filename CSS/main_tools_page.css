@@ -1,3 +1,10 @@
+#resource{
+	font-size: 20px;
+	text-align: center;
+	vertical-align: center;
+	
+}
+
 #total_land {
 	font-size: 20px;
 	text-align: center;
@@ -25,6 +32,15 @@
 	border-color: #CC9999;
 }
 
+#commander_level{
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	background: #CDC6C6;
+	border: 1px solid;
+	border-color: #CC9999;
+}
+
 #system_message_title {
 	font-family: SigmarOne;
 	font-size: 15px;
@@ -40,11 +56,3 @@
 	border: 1px solid;
 	border-color: #CC9999;
 }
-
-#resource{
-	font-size: 20px;
-	text-align: center;
-	vertical-align: center;
-	
-}
-/*Resources*/

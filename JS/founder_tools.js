@@ -1,42 +1,3 @@
-var land = 0;
-var war = 0;
-var economy = 0;
-
-var wps = 1;
-var eps = 1;
-var lps =1;
-
-var citizen_cost = 1;
-var soldier_cost = 1;
-var settler_cost = 1;
-
-var num_citizens = 0;
-var num_soldiers = 0;
-var num_settlers = 0;
-
-/* change starting cost with a variable nested if statement? */
-
-window.setInterval(
-function land_gain(){
-	land = land + lps;
-	document.getElementById("total_land").innerHTML = land;
-	
-} , 1000);
-
-window.setInterval(
-function war_gain(){
-	war = war + wps;
-	document.getElementById("total_war").innerHTML = war;
-	
-} , 1000);
-
-window.setInterval(
-function economy_gain(){
-	economy = economy + eps;
-	document.getElementById("total_economy").innerHTML = economy;
-	
-} , 1000);
-
 
 function systemclear(){
 	document.getElementById("system_message").innerHTML = "No Messages"
@@ -51,12 +12,13 @@ function buy_citizen(){
 			/*document.getElementById("NumCitizens").innerHTML = "You currently have  " + NumCitizens + " citizens.";*/
 			land = land - citizen_cost;
 			eps = eps + 2;
+			tlc =  tlc + citizen_cost;
 		}
 		else
 			document.getElementById("system_message").innerHTML = "You do not have enough Land Resources to provide for more Citizens right now!";
 		setTimeout(systemclear, 5000)
 }
-
+B
 function buy_soldier(){
 		soldier_cost = Math.pow(5, num_soldiers);
 		if(economy >= soldier_cost){
@@ -65,6 +27,7 @@ function buy_soldier(){
 			/*document.getElementById("NumSoldiers").innerHTML = "You currently have  " + NumSoldiers + " soldiers";*/
 			economy = economy - soldier_cost;
 			wps = wps + 2;
+			tec = tec + soldier_cost;
 		}
 		else
 			document.getElementById("system_message").innerHTML = "You do not have enough Economy Resources to fund a Soldier right now!";
@@ -79,6 +42,7 @@ function buy_settler(){
 			/*document.getElementById("NumSettlers").innerHTML = "You currently have  " + NumSettlers + " settlers";*/
 			war = war - settler_cost;
 			lps = lps + 2;
+			twc = twc + settler_cost;
 		}
 		else
 			document.getElementById("system_message").innerHTML = "You do not have enough War Resources to defend a Settler right now!";
