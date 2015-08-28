@@ -1,71 +1,251 @@
 <!DOCTYPE html>
-<html>
 <head>
-<title id="PageTitle">Conquest</title>
-<link rel="stylesheet" type="text/css" href="CSS/Conquest_style.css">
-<script type="text/javascript" src="JS/gamescript.js"></script>
-
-<!--pi.png = PlaceHolder Icon -->
-
-<div class="container">
-
-	<div class="FounderTools">
-		<h1 id="FoundingToolsTitle"> Founder Tools</h1>
-		<img class="Purchaseicon" id="Citizen" src="Images/pi.png">
-		<p id="FounderToolTip"> <b>Citizen</b> - An inhabitant of your settlement that creates commerce.</p>
-		<p class="ItemCaption" id="CitizenCost">The next citizen will cost 1 Land resources.</p>
-		<p class="ItemCaption" id="NumCitizens">You currently have 0 citizens.</p>
-		
-		<p class="ItemCaption"><button id="PurchaseFounderTool" onClick="buycitizen();">Buy Citizen</button></p>
-		<img class="Purchaseicon" id="Soilder" src="Images/pi.png">
-		<p id="FounderToolTip"> <b>Soilder</b> - A courageous battle-hardened fighter trained in the acts of warfare. </p>
-		<p class="ItemCaption" id="SoldierCost">The next Soldier will cost 1 economy and resources.</p>
-		<p class="ItemCaption" id="NumSoldiers">You currently have 0 soldiers</p>
-		<p class="ItemCaption"><button id="PurchaseFounderTool" onClick="buysoldier();">Buy Soldier</button><p/>
-		
-		<img class="Purchaseicon" id="Settler" src="Images/pi.png">
-		<p id="FounderToolTip"> <b>Settler</b> - An Explorer and establisher of new land.</p>
-	    <p class="ItemCaption" id="SettlerCost">The next Settler will cost 1 war resources.</p>
-		<p class="ItemCaption" id="NumSettlers">You currently have 0 settlers.</p>
-		<p class="ItemCaption"><button id="PurchaseFounderTool" onClick="buysettler();">Buy Settler</button></p>
-	</div>
-	
-	
-	<div class="ConquestMain">
-		<h1 id="MainTitle"> Conquest </h1>
-		<br>
-		<p id="Resource"> Land </p>
-		<p id="TotalLand">0</p>
-		<br>
-		<p id="Resource"> War</p>
-		<p id="TotalWar">0</p>
-		</br>
-		<p id="Resource"> Economy</p>
-		<p id="TotalEconomy">0</p>
-		<p>
-		<p>
-		<br>
-		<br>
-		<p id="SM"> System Messages </p>
-		<p id="SystemMessage"><b>Welcome to Conquest!</b><p>
-		<br>
-		<br>
-		
-		<center><button id="Help">Help</button></center>
-		<br>
-		<center><button id="About">About</button></center>
-		<br>
-	</div>
-	<div class="TalentsTraits">
-		<h1 id="TalentTitle">Talents and Traits</h1>
-	</div>
-	
-</div>
-		
-
-
-
+	<title>Conquest</title>
+	<link rel="stylesheet" type="text/css" href="CSS/conquest_page.css">
+	<link rel="stylesheet" type="text/css" href="CSS/conquest_talent_tables.css">
+	<link rel="stylesheet" type="text/css" href="CSS/main_tools_page.css">
+	<script type="text/javascript" src="JS/gamescript.js"></script>
 </head>
 <body>
+<div id="page_title">
+	<h2> Conquest </h2>
+</div>
+<div class="main_wrapper">
+	<!---Start Founder Tools--->
+	<div id="founder_tools_wrapper">
+	Founder Tools
+	<div style="width:100%; height:auto; overflow:auto; background:white;">
+			<table cellspacing="0" cellpadding="1" border="5" width="100%">
+				<tr>
+				<th>Name</th>
+				<th>Level</th> 
+				<th>Icon</th>
+				<th>Description</th>
+				<th>Cost</th>
+				<th>Buy</th>
+			</tr>
+			<tr>
+				<td>Citizen</td>
+				<td>1</td>
+				<td>Placeholder</td>
+				<td>An inhabitant of your settlement that creates commerce.</td>
+				<td><span id="citizen_cost">1</span><br>Land</td>
+				<td><button onClick="buy_citizen();">Buy Citizen</button></td>
+			</tr>
+			<tr>
+				<td>Soldier</td>
+				<td>1</td>
+				<td>Placeholder</td>
+				<td>A courageous battle-hardened fighter trained in the acts of warefare.</td>
+				<td><span id="soldier_cost">1</span><br>Economy</td>
+				<td><button onClick="buy_soldier();">Buy Soldier</button></td>
+			</tr>
+			<tr>
+				<td>Settler</td>
+				<td>1</td>
+				<td>Placeholder</td>
+				<td>An explorer and establisher of new land</td>
+				<td><span id="settler_cost">1</span><br>War</td>
+				<td><button onClick="buy_settler();">Buy Settler</button></td>
+			</tr>
+			</table>
+	</div>
+	</div>
+	<!---End Founder Tools--->
+	<!---Start Main Tools--->
+	<div id="main_tools_wrapper">
+	<p id="resource">Land</p>
+	<p id="total_land">0</p>
+	<br>
+	<p id="resource">War</p>
+	<p id="total_war">0</p>
+	<br>
+	<p id="resource">Economy</p>
+	<p id="total_economy">0</p>
+	<br>
+	<p id="system_message_title">System Messages</p>
+	<p id="system_message"><b>Welcome to Conquest!</b></p>
+	</div>
+	<!---End Main Tools--->
+	<!---Start Abilties--->
+	<div id="abilities_wrapper">
+	Abilties
+	</div>
+	<!---End Abilties--->
+	<!---Start Land Talents--->
+	<div id="land_talents_wrapper">
+	<p class="talent_titles">Land Talents</p>
+		<div style="width:100%; height:90%; overflow:auto; background:white;">
+			<table cellspacing="0" cellpadding="1" border="5" width="100%">
+				<tr>
+				<th>Name</th>
+				<th>Level</th>
+				<th>Icon</th>
+				<th>Description</th>
+				<th>Cost</th>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<!---End Land Talents--->
+	<!---Start War Talents--->
+	<div id="war_talents_wrapper">
+		<p class="talent_titles">War Talents</p>
+		<div style="width:100%; height:90%; overflow:auto; background:white;">
+			<table cellspacing="0" cellpadding="1" border="5" width="100%">
+				<tr>
+				<th>Name</th>
+				<th>Level</th>
+				<th>Icon</th>
+				<th>Description</th>
+				<th>Cost</th>
+			</tr>
+			<tr>
+				<td>Battle-Line</td>
+				<td>10</td>
+				<td>Placeholder</td>
+				<td>You join the battle and obtain war resources for each kill</td>
+				<td><button>Buy Battle-Line</button></td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<!---End War Talents--->
+	<!---Start Economy Talents--->
+	<div id="economy_talents_wrapper">
+		<p class="talent_titles">Economy Talents</p>
+		<div style="width:100%; height:90%; overflow:auto; background:white;">
+			<table cellspacing="0" cellpadding="1" border="5" width="100%">
+				<tr>
+				<th>Name</th>
+				<th>Level</th>
+				<th>Icon</th>
+				<th>Description</th>
+				<th>Cost</th>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+			<tr>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+				<td>Placeholder</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<!---End Economy Talents--->
+</div>
 </body>
 </html>

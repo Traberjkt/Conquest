@@ -1,0 +1,67 @@
+
+html, body{
+	background-color: #DDCCA9;
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#page_title{
+	font-size:18px;
+	text-align: center;
+	vertical-align:center;
+	font-weight: bold;
+	background:#CCB299;
+	border-style: solid;
+}
+
+.main_wrapper{
+	width:100%;
+	height:91%;
+	background:#ddd;
+}
+
+#founder_tools_wrapper{
+	float:left;
+	width:30%;
+	height: 80%;
+	background:#CCB299;
+}
+
+#main_tools_wrapper{
+	float:left;
+	width:40%;
+	height: 80%;
+	background:#D6C2AD;
+}
+
+
+#abilities_wrapper{
+	float:right;
+	width:30%;
+	height: 80%;
+	background:#CCB299;
+}
+
+#land_talents_wrapper{
+	float: left;
+	width:30%;
+	height: 20%;
+	background: #199643;
+}
+
+#war_talents_wrapper{
+	float:left;
+	width:40%;
+	height:20%;
+background: #921212
+}
+
+#economy_talents_wrapper{
+	float: right;
+	width:30%;
+	height: 20%;
+	background: #FFAD33;
+}
