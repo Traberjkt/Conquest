@@ -1,0 +1,50 @@
+#total_land {
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	background: #CDC6C6;
+	border: 1px solid;
+	border-color: #CC9999;
+}
+
+#total_war {
+	font-size: 20px;
+	text-align: center;
+	vertical-align: center;
+	background: #CDC6C6;
+	border: 1px solid;
+	border-color: #CC9999;
+}
+
+#total_economy{
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	background: #CDC6C6;
+	border: 1px solid;
+	border-color: #CC9999;
+}
+
+#system_message_title {
+	font-family: SigmarOne;
+	font-size: 15px;
+	text-align: center;
+	vertical-align: center;
+}
+
+#system_message {
+	font-size: 15px;
+	text-align: center;
+	vertical-align: middle;
+	background: #CAC4B8;
+	border: 1px solid;
+	border-color: #CC9999;
+}
+
+#resource{
+	font-size: 20px;
+	text-align: center;
+	vertical-align: center;
+	
+}
+/*Resources*/
